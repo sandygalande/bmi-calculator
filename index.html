@@ -1,37 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BMI Calculator</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&family=Roboto+Flex:opsz@8..144&display=swap"
-      rel="stylesheet"
-    />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="./index.js" defer></script>
   </head>
   <body>
-    <form action="">
-      <div class="container">
-        <div class="chaild">
-          <h2>BMI Calculator</h2>
-          <h3>Your BMI : 00</h3>
-          <div class="chaild1">
-            <div class="height">
-              <label for="" class="cm">Height (cm)</label>
-              <input type="number" />
-            </div>
-            <div class="weight">
-              <label for="" class="kg">Weight (kg)</label>
-              <input type="number" />
-            </div>
-            <button type="submit" class="btn">Calculate BMI</button>
-            <button type="Reset" class="btn1">Reset</button>
-          </div>
+    <div class="container">
+      <h1>BMI Calculator</h1>
+      <div class="calculator">
+        <div>
+          <label for="height">Height (Cm)</label>
+            <input type="number" id="num1">
         </div>
+        <div>
+          <label for="weight">Weight (Kg)</label>
+          <input type="number" id="num2">
+        </div>
+
+        <div>
+          <button type="submit" id="btn">Submit</button>
+          <button type="Reset" id="btn1">Reset</button>
+        </div>  
       </div>
-    </form>
+        <section class="result">
+          <h3>Your BMI is</h3>
+          <span id="resultValue">0</span>
+          <p id="desc">N/A</p>
+       </section>
+       <section class="bmi-scale">
+        <div style="--color: var(--underweight)">
+          <h4>Underweight</h4>
+          <p>&lt; 18.5</p>
+        </div>
+        <div style="--color: var(--normal)">
+          <h4>Normal</h4>
+          <p>18.5 - 25</p>
+        </div>
+        <div style="--color: var(--overweight)">
+          <h4>Overweight</h4>
+          <p>25 - 30</p>
+        </div>
+        <div style="--color: var(--obese)">
+          <h4>Obese</h4>
+          <p>>= 30</p>
+        </div>
+      </section>
+      </div>
+    </div>
   </body>
 </html>
